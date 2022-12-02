@@ -30,6 +30,10 @@
   display: none;
 }
 
+.modal-content{
+  width: 115%;
+}
+
 #map {
   height: 100%;
 }
@@ -118,4 +122,10 @@
 #Download_hydrographs{
   display: flex;
   flex-direction: row;
+}
+
+.fb_logos{
+  display:flex;
+  flex-flow: column wrap;
+  justify-content: center;
 }

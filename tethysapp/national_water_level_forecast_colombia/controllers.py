@@ -19,13 +19,17 @@ from HydroErr.HydroErr import metric_names, metric_abbr
 from hs_restclient import HydroShare, HydroShareAuthBasic
 
 from tethys_sdk.gizmos import *
+from tethys_sdk.routing import controller
+
 from django.shortcuts import render
 from django.http import HttpResponse, JsonResponse
-from .app import NationalWaterLevelForecastColombia as app
 
+from .app import NationalWaterLevelForecastColombia as app
 from .model import Stations_manage as stations
 
 
+@controller(name = "home",
+            url  = "national-water-level-forecast-colombia")
 def home(request):
     """
 	Controller for the app home page.
@@ -137,7 +141,8 @@ def home(request):
 
     return render(request, 'national_water_level_forecast_colombia/home.html', context)
 
-
+@controller(url  = "get-request-data",
+            name = "get_popup_response")
 def get_popup_response(request):
     """
 	get station attributes
@@ -249,6 +254,8 @@ def get_popup_response(request):
         })
 
 
+@controller(name = "get_hydrographs",
+            url  = "get-hydrographs")
 def get_hydrographs(request):
     """
 	Get observed data from csv files in Hydroshare
@@ -330,6 +337,8 @@ def get_hydrographs(request):
         })
 
 
+@controller(name = "get_dailyAverages",
+            url  = "get-dailyAverages")
 def get_dailyAverages(request):
     """
 	Get observed data from csv files in Hydroshare
@@ -396,6 +405,8 @@ def get_dailyAverages(request):
         })
 
 
+@controller(name = "get_monthlyAverages",
+            url  = "get-monthlyAverages")
 def get_monthlyAverages(request):
     """
 	Get observed data from csv files in Hydroshare
@@ -463,6 +474,8 @@ def get_monthlyAverages(request):
         })
 
 
+@controller(name = "get_scatterPlot",
+            url  = "get-scatterPlot")
 def get_scatterPlot(request):
     """
 	Get observed data from csv files in Hydroshare
@@ -551,6 +564,8 @@ def get_scatterPlot(request):
         })
 
 
+@controller(name = "get_scatterPlotLogScale",
+            url  = "get-scatterPlotLogScale")
 def get_scatterPlotLogScale(request):
     """
 	Get observed data from csv files in Hydroshare
@@ -627,6 +642,8 @@ def get_scatterPlotLogScale(request):
         })
 
 
+@controller(url  = "make-table-ajax",
+            name = "make_table_ajax")
 def make_table_ajax(request):
     start_time = time.time()
 
@@ -751,6 +768,8 @@ def make_table_ajax(request):
         })
 
 
+@controller(url  = "get-time-series-bc",
+            name = "get_time_series_bc")
 def get_time_series_bc(request):
     start_time = time.time()
 
@@ -1219,6 +1238,8 @@ def get_time_series_bc(request):
         })
 
 
+@controller(url  = "get-available-dates",
+            name = "get_available_dates")
 def get_available_dates(request):
     get_data = request.GET
     watershed = get_data['watershed']
@@ -1252,6 +1273,8 @@ def get_available_dates(request):
     })
 
 
+@controller(name = "get_observed_water_level_csv",
+            url  = "get-observed-water-level-csv")
 def get_observed_water_level_csv(request):
     """
 	Get observed data from csv files in Hydroshare
@@ -1297,6 +1320,8 @@ def get_observed_water_level_csv(request):
         })
 
 
+@controller(name = "get_simulated_bc_water_level_csv",
+            url  = "get-simulated-bc-water-level-csv")
 def get_simulated_bc_water_level_csv(request):
     """
 	Get historic simulations from ERA Interim
@@ -1334,6 +1359,8 @@ def get_simulated_bc_water_level_csv(request):
         })
 
 
+@controller(url  = "get-forecast-bc-data-csv",
+            name = "get_forecast_bc_data_csv")
 def get_forecast_bc_data_csv(request):
     """""
 	Returns Forecast data as csv
@@ -1371,6 +1398,8 @@ def get_forecast_bc_data_csv(request):
         })
 
 
+@controller(url  = "get-forecast-ensemble-bc-data-csv",
+            name = "get_forecast_ensemble_bc_data_csv")
 def get_forecast_ensemble_bc_data_csv(request):
     """""
 	Returns Forecast data as csv
@@ -1412,6 +1441,8 @@ def get_forecast_ensemble_bc_data_csv(request):
 
 
 ############################################################
+@controller(url  = "get-zoom-array",
+            name = "get_zoom_array")
 def get_zoom_array(request):
     zoom_description = request.GET['zoom_desc']
 
@@ -1440,12 +1471,17 @@ def get_zoom_array(request):
             'error': f'{"error: " + str(e), "line: " + str(exc_tb.tb_lineno)}',
         })
 
-############################################################
 
+############################################################
+@controller(name = "user_manual",
+            url  = "national-water-level-forecast-colombia/user_manual")
 def user_manual(request):
     context = {}
     return render(request, 'national_water_level_forecast_colombia/user_manual.html', context)
 
+
+@controller(name = "technical_manual",
+            url  = "national-water-level-forecast-colombia/technical_manual")
 def technical_manual(request):
     context = {}
     return render(request, 'national_water_level_forecast_colombia/technical_manual.html', context)
