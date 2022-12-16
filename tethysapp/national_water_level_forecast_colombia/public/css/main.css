@@ -30,9 +30,9 @@
   display: none;
 }
 
-.modal-content{
+/* .modal-content{
   width: 115%;
-}
+} */
 
 #map {
   height: 100%;
@@ -134,7 +134,10 @@
   border-radius: 0;
 }
 
-#graph .modal-dialog {
+#graph .modal-header {
+  display: inline-block !important;
+}
+/* #graph .modal-dialog {
   width: 75%;
   height: 75%;
   padding: 0;
@@ -144,7 +147,7 @@
   width: 75%;
   height: 75%;
   padding: 0;
-}
+} */
 
 .hidden {
   display: none;
@@ -164,4 +167,8 @@
   display:flex;
   /* flex-flow: column wrap; */
   justify-content: center;
+}
+
+#header_io{
+  width: 100%;
 }
