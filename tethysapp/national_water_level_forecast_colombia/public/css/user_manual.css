@@ -6,10 +6,10 @@
     
 } 
 
-h1 {background-color: #00374b; color: white;   padding: 7px 20px 5px 20px; margin-top: 1px; }
-h2 {background-color: #00374b; color: white;   padding: 7px 20px 5px 20px; margin-top: 50px; }
-h3 {background-color: #00374b; color: white;   padding: 7px 20px 5px 20px; margin-top: 50px; }
-h4 {background-color: white;   color: #00374b; border: #00374b solid 1px;padding: 7px 20px 5px 20px; margin-top: 50px; }
+h1 {background-color: rgba(32, 41, 92, 0.8); color: white;   padding: 7px 20px 5px 20px; margin-top: 1px; }
+h2 {background-color: rgba(32, 41, 92, 0.8); color: white;   padding: 7px 20px 5px 20px; margin-top: 50px; }
+h3 {background-color: rgba(32, 41, 92, 0.8); color: white;   padding: 7px 20px 5px 20px; margin-top: 50px; }
+h4 {background-color: white;   color: rgba(32, 41, 92, 0.8); border: rgba(32, 41, 92, 0.8) solid 1px;padding: 7px 20px 5px 20px; margin-top: 50px; }
 h5 {padding: 7px 20px 5px 20px; margin-top: 50px; }
 ul {list-style-type: none;}
 img {margin: 10px;}

@@ -1,4 +1,4 @@
-{% extends "national_water_level_forecast_colombia/base.html" %}
+{% extends "national_water_level_forecast_colombia/app_base.html" %}
 {% load static %}
 
 {% block import_gizmos %}
@@ -45,7 +45,7 @@
 
     <div class="fb_1">
       <div class="fb_11">
-        <p><center><img src="{% static 'national_water_level_forecast_colombia/images/national_water_level_colombia_logo.png' %}" style="width: 200px;" /> </center></p>
+        <p><center><img src="{% static 'national_water_level_forecast_colombia/images/icon.gif' %}" style="width: 200px;" /> </center></p>
       </div>
       <div class="fb_12">
         <p>La Aplicación <strong> National Water Level Forecast Colombia</strong> usa los datos observados de nivel
@@ -65,15 +65,11 @@
     <h3><strong>Interfaz principal</strong></h3>
     <p>La interfaz de usuario muestra la delimitación de los ríos en azul y de las estaciones con puntos 
       en rojo. Para cada estación, el usuario puede ver series de tiempo, analisis visuales y calcular métricas de error.</p>
-    <p><center><img src="{% static 'national_water_level_forecast_colombia/images/imgs/home.png' %}" style="width: 600px;" /> </center></p>
-
-    <p>Tanto los ríos como las estaciones pueden ser activados o desactivados del mapa base, como se muestra en la siguiente 
-      imagen:</p>
-    <p><center><img src="{% static 'national_water_level_forecast_colombia/images/imgs/stationless_and_streamless.png' %}" style="width: 600px;" /> </center></p>
+    <p><center><img src="{% static 'national_water_level_forecast_colombia/images/manual/home.png' %}" style="width: 600px;" /> </center></p>
 
     <p> A la izquierda de la pantalla se muestra un panel con algunas <strong>opciones de 
       visualización.</strong></p>
-    <center><img id="botondesplegable=" src="{% static 'national_water_level_forecast_colombia/images/imgs/legend.png' %}" style="width: 200px;"></center>
+    <center><img id="botondesplegable=" src="{% static 'national_water_level_forecast_colombia/images/manual/legend.png' %}" style="width: 200px;"></center>
     
   </div>
 
@@ -89,7 +85,7 @@
          de medicion de nivel. A manera de ejemplo, el usuario puede hacer clic en el botón <i> Zoom al 
          Departamento</i> y seleccionar el departamento al cual quiera realizar zoom, obteniendo 
          un resultado como el mostrado a continuación:</p>
-        <a class="reference internal image-reference" href="_images/cundinamarca.png"><center><img src="{% static 'national_water_level_forecast_colombia/images/imgs/cundinamarca.png' %}" style="width: 500px;" /></center></a>
+        <a class="reference internal image-reference" href="_images/cundinamarca.png"><center><img src="{% static 'national_water_level_forecast_colombia/images/manual/cundinamarca.png' %}" style="width: 500px;" /></center></a>
       </li>
 
       <li><strong>Zonas hidrográficas</strong>
@@ -99,7 +95,7 @@
           <i>Zoom a Z.H.</i> y seleccionar de la lista despegable las diferentes zonas hidrográficas,
           al seleccionar una de estas, podrá hacer zoom a la zona hidrográfica seleccionada. Como se muestra 
           a continuación.</p>
-        <a class="reference internal image-reference" href="_images/alto_mag.png"><center><img src="{% static 'national_water_level_forecast_colombia/images/imgs/alto_mag.png' %}" style="width: 500px;" /></center></a>
+        <a class="reference internal image-reference" href="_images/alto_mag.png"><center><img src="{% static 'national_water_level_forecast_colombia/images/manual/alto_mag.png' %}" style="width: 500px;" /></center></a>
       </li>
 
       <li><strong>Sub zonas hidrográficas</strong>
@@ -108,7 +104,7 @@
           zonas hidrográficas. A manera de ejemplo, el usuario puedeclic en el botón <i>Zoom a 
             S.Z.H.</i>, y posteriormente seleccionar la zona a la cual se realizará el zoom. Como 
           se observa en la imagen a continuación.</p>
-        <a class="reference internal image-reference" href="_images/sumapaz.png"><center><img src="{% static 'national_water_level_forecast_colombia/images/imgs/sumapaz.png' %}" style="width: 700px;" /></center></a>
+        <a class="reference internal image-reference" href="_images/sumapaz.png"><center><img src="{% static 'national_water_level_forecast_colombia/images/manual/sumapaz.png' %}" style="width: 700px;" /></center></a>
       </li>
 
       <li><strong>Búsqueda por estación</strong>
@@ -121,7 +117,7 @@
           <p>Se ingresa el nombre del rio en el espacio <i>Busqueda por estación</i>, se seleccionará el
             nombre de la lista desplegada y se hará click en el icono de lupa que se encuentra en la parte 
             inferior. A continuaciòn se muestran el resultado.</p>
-		  <a class="reference internal image-reference" href="_images/pto_salgar.png"><center><img src="{% static 'national_water_level_forecast_colombia/images/imgs/pto_salgar.png' %}" style="width: 700px;" /></center></a>
+		  <a class="reference internal image-reference" href="_images/pto_salgar.png"><center><img src="{% static 'national_water_level_forecast_colombia/images/manual/pto_salgar.png' %}" style="width: 700px;" /></center></a>
           
       </li>
     </ol>
@@ -143,7 +139,7 @@
         <p>La pestaña muestra el hidrograma diario con los valores observados y simulados corregidos de nivel, con el fin de comprar 
 		visualmente ambas series. Se presentan los datos históricos simulados corregidos (verde) y los datos historicos observados (azul).
 		El usuario puede activar y desactivar cada una de las opciones del hidrograma, como se muestra en la siguiente imagen:</p>
-        <p><center><img src="{% static 'national_water_level_forecast_colombia/images/imgs/hidrogramas.png' %}" style="width: 700px;" /> </center></p>
+        <p><center><img src="{% static 'national_water_level_forecast_colombia/images/manual/hidrogramas.png' %}" style="width: 700px;" /> </center></p>
         <p>Para descargar la imagen, puede hacerlo en los botones de la derecha en el ícono de cámara. Adicional, en la
           misma ubicación puede realizar zoom al gráfico y restaurar los ejes como la serie de tiempo en casa de realizar zoom a los 
 		  datos del gráfico</p>
@@ -156,7 +152,7 @@
         <p>La segunda pestaña en la ventana emergente es el análisis visual: Esta compara la serie historica de 
 		niveles y la serie historica simulada de niveles corregida mediante el promedio diario, promedio mensual,
           diagrama de dispersión y diagrama de dispersión usando escala logarítmica.</p>
-        <p><center><img src="{% static 'national_water_level_forecast_colombia/images/imgs/visual_analysis.png' %}" style="width: 600px;" /> </center></p>
+        <p><center><img src="{% static 'national_water_level_forecast_colombia/images/manual/visual_analysis.png' %}" style="width: 600px;" /> </center></p>
       </li>
 
       <li>
@@ -165,14 +161,14 @@
           métricas predeterminadas, pero los usuarios pueden agregar métricas adicionales de las disponibles en el paquete
           HydroStats. La interfaz proporciona métricas de error que pueden cuantificar la similutd entre entre la simulación
 		  histórica corregida por sesgo y la simulación histórica original.</p>
-        <p><center><img src="{% static 'national_water_level_forecast_colombia/images/imgs/metricas.png' %}" style="width: 600px;" /> </center></p>
+        <p><center><img src="{% static 'national_water_level_forecast_colombia/images/manual/metricas.png' %}" style="width: 600px;" /> </center></p>
       </li>
 
       <li>
         <h4><strong>Pronóstico corregido</strong></h4>
         <p>La cuarta pestaña muestra el pronóstico corregido por sesgo, los umbrales de los períodos de retorno calculados a partir
 		de la simulación histórica corregida.
-        <p><center><img src="{% static 'national_water_level_forecast_colombia/images/imgs/pronostico_user.png' %}" style="width: 600px;" /> </center></p>
+        <p><center><img src="{% static 'national_water_level_forecast_colombia/images/manual/pronostico_user.png' %}" style="width: 600px;" /> </center></p>
         <p>La grafica de pronósticos provienen de 51 ensables diferentes y uno de alta resolución, muestran los percentiles
           de nivel 25 y 75, nivel máximo y mínimo y un pronóstico de alta resolución. La leyenda desplegada en la derecha
           muestra las diferentes capas se pueden activar y desactivar de los periodos de retorno calculados para la simulación
